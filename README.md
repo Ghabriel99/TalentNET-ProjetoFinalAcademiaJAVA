@@ -1,9 +1,9 @@
 # TalentNET-ProjetoFinalAcademiaJAVA
 API REST Web desenvolvida para o Projeto final da Quinta Academia de JAVA da ATOS com a UFN
 
-## Descrição da aplicação :
+## Resumi da aplicação :
 
-Este projeto é uma aplicação web REST desenvolvida em Java com Spring Boot no Backend, e Angular no Frontend. <br>
+Este projeto é uma aplicação web REST desenvolvida em Java com Spring Boot no Backend, e Angular no Frontend. <br><br>
 Funcionalidades da aplicação: <br>
 Cadastro, atualização, remoção e listagem de Canidatos e Vagas para o sistema interno de uma empresa.
 Aplicação protegida em todos seus endpoints com Spring Security e JWT (JSON WEB TOKEN)
@@ -60,6 +60,11 @@ spring.jpa.properties.hibernate.format_sql=true <br>
 
 ### 4. Acesse a aplicação
 Abra um navegador e acesse `http://localhost:4200`.
+
+### 5. Funcionalidades da aplicação:
+Tela de login aonde é feito a autenticação, e é gerado o token JWT para o usuário
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/21c03fd9-eded-4195-bd5e-c736bb17df5a)
+
 
 ## Contribuições
 
