@@ -1,7 +1,7 @@
 # TalentNET-ProjetoFinalAcademiaJAVA
 API REST Web desenvolvida para o Projeto final da Quinta Academia de JAVA da ATOS com a UFN
 
-## Resumi da aplicação :
+## Resumo da aplicação :
 
 Este projeto é uma aplicação web REST desenvolvida em Java com Spring Boot no Backend, e Angular no Frontend. <br><br>
 Funcionalidades da aplicação: <br>
@@ -61,9 +61,38 @@ spring.jpa.properties.hibernate.format_sql=true <br>
 ### 4. Acesse a aplicação
 Abra um navegador e acesse `http://localhost:4200`.
 
-### 5. Funcionalidades da aplicação:
+### 5. Funcionalidades e telas da aplicação:
 Tela de login aonde é feito a autenticação, e é gerado o token JWT para o usuário
-![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/21c03fd9-eded-4195-bd5e-c736bb17df5a)
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/b8a90f93-f56e-4e57-a221-0dfeb8c7b01f) <br>
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/90b5987e-b6e6-4093-8022-38495000fce1)
+
+
+Tela de cadastro de novos usuários:
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/7f208037-a7fd-4d22-b5ab-f7de769a403d) <br>
+
+Tela do Perfil com os dados do usuário logado:
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/65627981-3962-47b7-ad36-c600c3757de0) <br>
+
+Tela de Cadastro de novos Candidatos:
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/d0f4f004-a108-4b87-9487-32c51ecb4430) <br>
+
+Tela de Cadastro de novas Vagas:
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/9b94e644-5038-4481-b204-18b0c83f92d5) <br>
+
+
+Tela de Listagem de Candidatos:
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/7ecb5b01-ab92-4de7-9e29-d073f3029762) <br>
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/937fc732-9e78-41ee-a8b5-2af34b01f661)
+
+
+Tela de listagem de Vagas:
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/f9470c94-7b6e-47ad-933d-a931cde1d22b) <br>
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/336f30d9-d6bc-4eb4-86f5-439bc0a1738c) <br>
+
+Telas de teste no Postman:
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/4ff6fa45-23f0-40fc-b689-9a2e4d2d809c) <br>
+![image](https://github.com/Ghabriel99/TalentNET-ProjetoFinalAcademiaJAVA/assets/86672683/1aaa646a-42f8-43b4-abae-2079c1c58392)
+
 
 
 ## Contribuições
