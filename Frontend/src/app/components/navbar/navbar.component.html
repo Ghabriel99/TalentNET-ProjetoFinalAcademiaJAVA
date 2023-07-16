@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <a [routerLink]="'/'" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon">
+    <mat-icon>menu_user</mat-icon>
+  </a>
+
+  <span>TalentNET</span>
+  <span class="example-spacer"></span>
+
+  <a *ngIf="!isLoggedIn" [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon"
+    aria-label="">Login</a>
+
+  <a *ngIf="!isLoggedIn" [routerLink]="'/signup'" mat-icon-button class="example-icon favorite-icon mr75 ml30"
+    aria-label="">Registar</a>
+
+  <a *ngIf="isLoggedIn" (click)="logout()" style="margin-right: 40px;" mat-icon-button
+    class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">Sair
+  </a>
+
+  <!-- botão com o nome do usuário logado e direcionado para o Meu perfil -->
+  <button
+  *ngIf="isLoggedIn && user"
+  mat-button
+  style="margin-right: 10px;"
+  class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+  routerLink="/admin/perfil">
+  {{user.username}}
+  </button>
+
+</mat-toolbar>

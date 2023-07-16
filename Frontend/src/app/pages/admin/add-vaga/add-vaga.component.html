@@ -1,0 +1,51 @@
+<mat-card>
+  <h1 class="text-center mt10">Adicione uma nova vaga</h1>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <form #vagaForm="ngForm" (ngSubmit)="formVagaSubmit(vagaForm)">
+
+            <mat-form-field class="w100" appearance="outline">
+
+              <mat-label>Descrição</mat-label>
+              <textarea name="descricao"
+              matInput
+              rows="10"
+              placeholder="Digite a descricao da Vaga"
+              [(ngModel)] = "vaga.descricao" #descricao="ngModel" >
+              </textarea>
+              <mat-error class="fs-14" *ngIf="descricao.invalid && descricao.touched">Informe a descrição da vaga</mat-error>
+            </mat-form-field>
+
+              <mat-form-field class="w100 mb-15" appearance="outline">
+                <mat-label>Cargo</mat-label>
+                <input required autofocus type="text" name="cargo" matInput
+                  placeholder="Digite o cargo " [(ngModel)]="vaga.cargo" #cargo="ngModel">
+                  <mat-error class="fs-14" *ngIf="cargo.invalid && cargo.touched">Informe o cargo da Vaga!</mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="w100 mb-15" appearance="outline">
+                <mat-label>Gestor</mat-label>
+                <input required autofocus type="text" name="gestor" matInput
+                  placeholder="Digite o Gestor do candidato" [(ngModel)]="vaga.gestor" #gestor="ngModel">
+                  <mat-error class="fs-14" *ngIf="gestor.invalid && gestor.touched">Informe o Gestor da Vaga!</mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="w100 mb-15" appearance="outline">
+                <mat-label>Salario</mat-label>
+                <input required autofocus type="text" name="salario" matInput
+                  placeholder="Digite o sálário do candidato" [(ngModel)]="vaga.salario" #salario="ngModel">
+                  <mat-error class="fs-14" *ngIf="salario.invalid && salario.touched">Informe o salário da Vaga!</mat-error>
+                </mat-form-field>
+
+
+              <div class="container text-center mt15">
+                <button mat-raised-button color="primary" [disabled]="vagaForm.invalid">Salvar Vaga</button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

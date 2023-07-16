@@ -1,0 +1,67 @@
+<mat-card>
+  <!-- Header dos Candidatos com a barra de pesquisa pelo nome -->
+  <h1 class="h-flex linha">Lista de todos Candidatos
+    <input class="input-busca" type="search" [(ngModel)]="filtro" (ngModelChange)="filtrarCandidatos()"
+      placeholder="Pesquise pelo nome" />
+  </h1>
+
+  <div *ngIf="candidatos.length === 0" class="p-busca">
+    <p><br>Nenhum candidato encontrado com esse nome!</p>
+  </div>
+
+
+  <mat-card-content>
+    <!-- loop for para percorrer todos os candidatos já cadastrados  -->
+    <div *ngFor="let c of candidatos" class="mt-15">
+
+      <div class="row">
+        <div class="col-md-10">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+
+                  <p class="mb-1"><strong>ID</strong></p>
+                  <p>{{ c.candidatoID }}</p>
+                </div>
+                <div class="col-md-2">
+                  <p class="fonte"><strong>Nome</strong></p>
+                  <p>{{ c.nome }}</p>
+                </div>
+                <div class="col-md-1">
+                  <p class="fonte"><strong>Idade</strong></p>
+                  <p>{{ c.idade }}</p>
+                </div>
+                <div class="col-md-3">
+                  <p class="fonte"><strong>CPF</strong></p>
+                  <p>{{ c.cpf }}</p>
+                </div>
+                <div class="col-md-3">
+                  <p class="fonte"><strong>Email</strong></p>
+                  <p>{{ c.email }}</p>
+                </div>
+                <div class="col-md-2">
+                  <p class="fonte"><strong>Telefone</strong></p>
+                  <p>{{ c.telefone }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Açoes de atualizar e remover -->
+        <mat-card-actions class="col-md-2 d-flex align-items-center justify-content-end">
+          <div class="d-flex flex-column align-items-end">
+            <button [routerLink]="'/admin/candidato/'+ c.candidatoID" mat-flat-button color="primary"
+              class="ml-63">Atualizar</button>
+            <button mat-flat-button color="warn" class="mt-8 ml-65"
+              (click)="removerCandidato(c.candidatoID)">Remover</button>
+          </div>
+        </mat-card-actions>
+
+
+      </div>
+      <hr>
+    </div>
+  </mat-card-content>
+</mat-card>

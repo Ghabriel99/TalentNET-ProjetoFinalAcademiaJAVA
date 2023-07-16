@@ -1,0 +1,65 @@
+<mat-card>
+  <h1 class="text-center mt10">Atualizar o candidato</h1>
+
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <form  *ngIf="candidato" (ngSubmit)="atualizarDados()">
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label>Nome</mat-label>
+
+              <input required autofocus type="text" name="nome"
+              matInput
+              required
+              placeholder="Digite o nome do candidato"
+              [(ngModel)] = "candidato.nome"
+            >
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label>Idade</mat-label>
+              <input required autofocus type="text" name="idade"
+              matInput
+              placeholder="Digite a idade do candidato"
+              [(ngModel)] = "candidato.idade"
+            >
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label>CPF</mat-label>
+              <input required autofocus type="text" name="cpf"
+              matInput
+              placeholder="Digite o CPF do candidato"
+              [(ngModel)] = "candidato.cpf"
+            >
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label>E-mail</mat-label>
+              <input required autofocus type="text" name="email"
+              matInput
+              placeholder="Digite o email do candidato"
+              [(ngModel)] = "candidato.email"
+            >
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label>Telefone</mat-label>
+              <input required autofocus type="text" name="telefone"
+              matInput
+              placeholder="Digite o telefone do candidato"
+              [(ngModel)] = "candidato.telefone"
+            >
+            </mat-form-field>
+
+            <div class="container text-center mt15">
+              <button mat-raised-button color="primary">Atualizar Candiato</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

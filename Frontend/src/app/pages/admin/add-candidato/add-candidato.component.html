@@ -1,0 +1,54 @@
+<mat-card>
+  <h1 class="text-center mt-15 mb-30">Adicionar um novo candidato</h1>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <form #candidatoForm="ngForm" (ngSubmit)="formSubmit(candidatoForm)">
+
+            <mat-form-field class="w100 mb-20" appearance="outline">
+              <mat-label>Nome</mat-label>
+              <input required autofocus type="text" name="nome" matInput placeholder="Digite o nome do cadidato"
+                [(ngModel)]="candidato.nome" #nome="ngModel">
+              <mat-error class="fs-14" *ngIf="nome.invalid && nome.touched">Informe o nome do candidato</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="w100 mb-20" appearance="outline">
+              <mat-label>Idade</mat-label>
+              <input required autofocus type="text" pattern="\d+" name="idade" matInput
+                placeholder="Digite a idade do candidato" [(ngModel)]="candidato.idade" #idade="ngModel">
+              <mat-error class="fs-14" *ngIf="idade.invalid && idade.touched">Informe uma idade válida!</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="w100 mb-20" appearance="outline">
+              <mat-label>CPF</mat-label>
+              <input required autofocus type="text" pattern="\d+" name="cpf" matInput placeholder="Digite o CPF do candidato"
+                [(ngModel)]="candidato.cpf" #cpfInserido="ngModel" >
+
+              <mat-error class="fs-14" *ngIf="cpfInserido.invalid && cpfInserido.touched">CPF
+                inválido!</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="w100 mb-20" appearance="outline">
+              <mat-label>E-mail</mat-label>
+              <input required autofocus type="text" name="email" matInput required email
+                placeholder="Digite o email do candidato" [(ngModel)]="candidato.email" #email="ngModel">
+              <mat-error class="fs-14" *ngIf="email.invalid && email.touched">E-mail inválido!</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="w100 mb-20" appearance="outline">
+              <mat-label>Telefone</mat-label>
+              <input required autofocus type="text" pattern="\d+" name="telefone" matInput
+                placeholder="Telefone (XX) XXXXX-XXXX" [(ngModel)]="candidato.telefone" #telefone="ngModel">
+              <mat-error class="fs-14" *ngIf="telefone.invalid && telefone.touched">Telefone inválido!</mat-error>
+            </mat-form-field>
+
+            <div class="container text-center mt15">
+              <button mat-raised-button color="primary" [disabled]="candidatoForm.invalid">Salvar Candidato</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

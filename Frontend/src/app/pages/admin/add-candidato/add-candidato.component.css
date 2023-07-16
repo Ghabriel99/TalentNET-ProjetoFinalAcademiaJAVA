@@ -1,0 +1,29 @@
+.w100 {
+  width: 100%;
+}
+
+.text-center {
+  align-items: center;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mb-30{
+  margin-bottom: 30px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.fs-14 {
+  font-size: 14px;
+  margin-top: 3px;
+}
+

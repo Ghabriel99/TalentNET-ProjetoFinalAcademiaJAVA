@@ -1,0 +1,49 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row" style="margin-top: 30px;">
+      <div class="col-md-6 offset-md-3">
+        <div class="container text-center">
+          <img src="../../../assets/add-group.png" width="99" height="99">
+        </div>
+
+        <h1 class="text-center">Cadastre-se</h1>
+
+        <form (ngSubmit)="formSubmit()">
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Nome do usuário</mat-label>
+            <input [(ngModel)]="user.username" name="username" matInput placeholder="Cadastre seu usuário" required minlength="3">
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input required [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Cadastre sua senha" >
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input [(ngModel)]="user.nome" name="nome" matInput placeholder="Cadastre seu nome" required>
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input [(ngModel)]="user.email" name="email" type="email" matInput placeholder="Cadastre seu e-mail" required email>
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Telefone</mat-label>
+            <input [(ngModel)]="user.telefone" name="telefone" matInput placeholder="Cadastre o telefone (XX) XXXXX-XXXX" required>
+          </mat-form-field>
+
+          <div class="container text-center">
+            <button mat-raised-button color="primary">Cadastrar</button>
+            <button type="reset" style="margin-left: 22px;" mat-raised-button color="accent">Limpar</button>
+          </div>
+
+        </form>
+
+        <br><br><br>
+      </div>
+    </div>
+  </div>
+</div>

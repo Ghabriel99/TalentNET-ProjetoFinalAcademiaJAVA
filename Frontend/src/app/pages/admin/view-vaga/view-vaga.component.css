@@ -1,0 +1,55 @@
+.w100 {
+  width: 100%;
+}
+
+.linha {
+  border-bottom: .75px solid black;
+  padding: .5rem;
+}
+
+.input-busca {
+  width: 280px;
+  height: 40px;
+  font-size: .7em;
+  text-align: center;
+  border-radius: .7em;
+
+}
+
+.h-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: .5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.p-busca {
+  font-size: 22px;
+  text-align: center;
+}
+
+.fonte {
+  font-size: 1rem;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.ml-65 {
+  margin-left: 65px !important;
+}
+
+.ml-60 {
+  margin-left: 60px !important;
+}

@@ -1,0 +1,42 @@
+<mat-card style="margin-left: 10px; border-radius: 20px;">
+  <h1 class="text-center mb40 mt20">Detalhes do perfil</h1>
+  <mat-card-content class="text-center">
+    <div class="bootstrap-wrapper">
+      <div class="container">
+        <div class="text-center">
+          <img src="https://www.nicepng.com/png/detail/138-1387674_png-file-svg-user-login-icon-png.png"
+          class="profile-image">
+
+          <h1 class="mt20">{{user.nome}}</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <table class="table text-center">
+              <tr>
+                <td>Nome do usuario</td>
+                <td>{{user.username}}</td>
+              </tr>
+              <tr>
+                <td>ID</td>
+                <td>{{user.id}}</td>
+              </tr>
+              <tr>
+                <td>Telefone</td>
+                <td>{{user.telefone}}</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>{{user.authorities[0].authority }}</td>
+              </tr>
+              <tr>
+                <td>Estado</td>
+                <td>{{user.enabled ? "Ativo" : "Inativo"}}</td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

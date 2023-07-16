@@ -1,0 +1,49 @@
+<mat-card>
+  <h1 class="text-center mt10">Atualize a vaga</h1>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <form *ngIf="vaga" (ngSubmit)="atualizarVaga()">
+
+            <mat-form-field class="w100" appearance="outline">
+
+              <mat-label>Descrição</mat-label>
+              <textarea name="descricao"
+              matInput
+              placeholder="Digite a descricao do candidato"
+              rows="12"
+              [(ngModel)] = "vaga.descricao"
+              >
+              </textarea>
+            </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Cargo</mat-label>
+                <input required autofocus type="text" name="cargo" matInput placeholder="Digite o cargo "
+                  [(ngModel)]="vaga.cargo">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Gestor</mat-label>
+                <input required autofocus type="text" name="gestor" matInput placeholder="Digite o Gestor do candidato"
+                  [(ngModel)]="vaga.gestor">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Salario</mat-label>
+                <input required autofocus type="text" name="salario" matInput
+                  placeholder="Digite o sálário do candidato" [(ngModel)]="vaga.salario">
+              </mat-form-field>
+
+
+              <div class="container text-center mt15">
+                <button mat-raised-button color="primary">Salvar atualização</button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+

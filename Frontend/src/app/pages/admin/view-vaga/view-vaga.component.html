@@ -1,0 +1,67 @@
+<mat-card>
+  <!-- Header das vagas com a barra de pesquisa pelo cargo -->
+  <h1 class="h-flex linha">Lista de todas Vagas
+    <input class="input-busca" type="search" [(ngModel)]="filtro" (ngModelChange)="filtrarVagas()"
+      placeholder="Pesquise pelo cargo da vaga" />
+  </h1>
+
+
+  <div *ngIf="vagas.lenght === 0" class="p-busca">
+    <p><br>Nenhuma vaga encontrada pelo ID!</p>
+  </div>
+
+
+  <mat-card-content>
+    <!-- loop for para percorrer todos os vagas já cadastradas  -->
+    <div *ngFor="let v of vagas" class="mt-15 linha">
+
+      <div class="row">
+        <div class="col-md-10">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+
+                  <p class="fonte"><strong class="coluna">ID</strong></p>
+                  <p>{{ v.vagaID }}</p>
+                </div>
+
+                <div class="col-md-4">
+                  <p class="fonte"><strong>Descrição</strong></p>
+                  <p>{{ v.descricao }}</p>
+                </div>
+
+                <div class="col-md-2">
+                  <p class="fonte"><strong>Cargo</strong></p>
+                  <p>{{ v.cargo }}</p>
+                </div>
+
+                <div class="col-md-3">
+                  <p class="fonte"><strong>Gestor</strong></p>
+                  <p>{{ v.gestor }}</p>
+                </div>
+
+                <div class="col-md-2">
+                  <p class="fonte"><strong>Salário(R$)</strong></p>
+                  <p>{{ v.salario }}</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Açoes de atualizar e remover -->
+        <mat-card-actions class="col-md-2 d-flex align-items-center justify-content-end">
+
+          <div class="d-flex flex-column align-items-end">
+            <button [routerLink]="'/admin/vaga/'+v.vagaID" mat-flat-button color="primary" class="ml-60">
+              <span class="material-symbols-outlined">Atualizar</span></button>
+            <button mat-flat-button color="warn" class="mt-8 ml-65" (click)="removerVaga(v.vagaID)">Eliminar</button>
+          </div>
+
+        </mat-card-actions>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

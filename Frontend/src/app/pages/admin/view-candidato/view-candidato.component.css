@@ -1,0 +1,69 @@
+
+.w100 {
+  width: 100%;
+}
+
+.linha {
+  border-bottom: .75px solid black;
+  padding: .5rem;
+}
+
+.fonte {
+  font-size: 1em;
+}
+
+.input-busca {
+  width: 250px;
+  height: 40px;
+  font-size: .7em;
+  text-align: center;
+  border-radius: .7em;
+}
+
+.h-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: .5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.p-busca {
+  font-size: 22px;
+  text-align: center;
+
+}
+
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.ml-70 {
+  margin-left: 70px !important;
+}
+
+.ml-65 {
+  margin-left: 65px !important;
+}
+
+.ml-63 {
+  margin-left: 63px !important;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mb-30{
+  margin-bottom: 30px;
+}
+
